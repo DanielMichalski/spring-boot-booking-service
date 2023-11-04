@@ -10,5 +10,4 @@ public record PropertyBookingEntity(UUID id,
                                     OffsetDateTime startDate,
                                     OffsetDateTime endDate,
                                     UUID propertyId) {
-
 }
