@@ -1,0 +1,4 @@
+id;guest_first_name;guest_last_name;date_created;start_date;end_date;property_id
+97d6a00f-a83b-41b9-b3ae-4c066f9109f9;Izaak;Colon;'2023-12-04T15:00:00+01:00';2024-12-03;2024-12-06;6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf
+cdd88bcb-8fc7-4a39-822c-e514150d769e;Denis;Carey;'2023-12-04T15:00:00+01:00';2025-12-03;2025-12-06;6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf
+5299e50c-4de4-4d76-95df-412552a9fe38;Reid;Frazier;'2023-12-04T15:00:00+01:00';2026-12-03;2026-12-06;6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf

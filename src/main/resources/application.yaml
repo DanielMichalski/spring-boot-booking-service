@@ -1,0 +1,7 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+    contexts: test-data
+
+mybatis:
+  type-handlers-package: com.danielmichalski.bookingservice.config.mybatis.handler
