@@ -1,4 +1,4 @@
-# Property reservation service
+# Property booking service
 
 This is a property booking service with ability to book and block properties.
 
