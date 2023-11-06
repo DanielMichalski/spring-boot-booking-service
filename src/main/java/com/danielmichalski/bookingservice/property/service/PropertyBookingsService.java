@@ -3,8 +3,10 @@ package com.danielmichalski.bookingservice.property.service;
 import com.danielmichalski.bookingservice.common.date.CurrentDateTimeService;
 import com.danielmichalski.bookingservice.common.exception.NotFoundException;
 import com.danielmichalski.bookingservice.property.dto.BookPropertyRequest;
+import com.danielmichalski.bookingservice.property.dto.PropertyBookingDto;
 import com.danielmichalski.bookingservice.property.dto.UpdateBookingRequest;
 import com.danielmichalski.bookingservice.property.entity.PropertyBookingEntity;
+import com.danielmichalski.bookingservice.property.mapper.PropertyBookingMapper;
 import com.danielmichalski.bookingservice.property.repository.PropertyBookingsRepository;
 import com.danielmichalski.bookingservice.property.validator.PropertyBookingsValidator;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +24,7 @@ public class PropertyBookingsService {
     private final PropertyBookingsValidator propertyBookingsValidator;
 
     @Transactional
-    public UUID bookProperty(UUID propertyId, BookPropertyRequest request) {
+    public PropertyBookingDto bookProperty(UUID propertyId, BookPropertyRequest request) {
         propertyBookingsValidator.validateBooking(propertyId, request.startDate(), request.endDate());
 
         UUID bookingId = UUID.randomUUID();
@@ -38,7 +40,7 @@ public class PropertyBookingsService {
 
         propertyBookingsRepository.bookProperty(propertyBookingEntity);
 
-        return bookingId;
+        return PropertyBookingMapper.mapTaskDto(propertyBookingEntity);
     }
 
     @Transactional

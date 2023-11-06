@@ -1,6 +1,7 @@
 package com.danielmichalski.bookingservice.property.controller;
 
 import com.danielmichalski.bookingservice.property.dto.BookPropertyRequest;
+import com.danielmichalski.bookingservice.property.dto.PropertyBookingDto;
 import com.danielmichalski.bookingservice.property.dto.UpdateBookingRequest;
 import com.danielmichalski.bookingservice.property.service.PropertyBookingsService;
 import jakarta.validation.Valid;
@@ -28,8 +29,8 @@ public class PropertyBookingsController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public UUID bookProperty(@PathVariable UUID propertyId,
-                             @Valid @RequestBody BookPropertyRequest request) {
+    public PropertyBookingDto bookProperty(@PathVariable UUID propertyId,
+                                           @Valid @RequestBody BookPropertyRequest request) {
         return propertyBookingsService.bookProperty(propertyId, request);
     }
 
@@ -42,6 +43,7 @@ public class PropertyBookingsController {
     }
 
     @DeleteMapping("/{bookingId}")
+    @ResponseStatus(NO_CONTENT)
     public void cancelBooking(@PathVariable UUID propertyId, @PathVariable UUID bookingId) {
         propertyBookingsService.cancelBooking(propertyId, bookingId);
     }
