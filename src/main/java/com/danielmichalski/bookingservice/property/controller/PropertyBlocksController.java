@@ -21,7 +21,7 @@ import java.util.UUID;
 import static org.springframework.http.HttpStatus.NO_CONTENT;
 
 @RestController
-@RequestMapping("/api/properties/{propertyId}/blocking")
+@RequestMapping("/api/properties/{propertyId}/blocks")
 @RequiredArgsConstructor
 public class PropertyBlocksController {
 

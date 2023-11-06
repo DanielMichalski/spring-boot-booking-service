@@ -76,7 +76,7 @@ curl -X DELETE http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-0624
 curl -d '{
   "startDate": "2023-12-12T00:00:00Z",
   "endDate": "2023-12-15T00:00:00Z"
-}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocking
+}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocks
 ```
 
 #### 2. Update property block
@@ -87,11 +87,11 @@ curl -d '{
   "questLastName": "Carey_updated",
   "startDate": "2025-12-07T00:00:00Z",
   "endDate": "2025-12-08T00:00:00Z"
-}' -H "Content-Type: application/json" -X PUT http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocking/2e8d11c2-3c7e-4dd8-9714-dd2e5968b4ed
+}' -H "Content-Type: application/json" -X PUT http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocks/2e8d11c2-3c7e-4dd8-9714-dd2e5968b4ed
 ```
 
 #### 3. Delete property block
 
 ```bash
-curl -X DELETE http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocking/49122e5e-7983-447d-a340-03c4a774bae3
+curl -X DELETE http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocks/49122e5e-7983-447d-a340-03c4a774bae3
 ```
