@@ -65,6 +65,6 @@ public interface PropertyBookingsRepository {
                     AND property_id = #{propertyId}
                     AND date_deleted IS NULL
             """)
-    void cancelBooking(@Param("propertyId") UUID propertyId, @Param("bookingId") UUID bookingId);
+    boolean cancelBooking(@Param("propertyId") UUID propertyId, @Param("bookingId") UUID bookingId);
 
 }

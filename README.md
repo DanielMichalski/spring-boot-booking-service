@@ -41,6 +41,7 @@ mvnw.cmd spring-boot:run
 ### Bookings
 
 #### 1. Create booking
+
 ```bash
 curl -d '{
   "guestFirstName": "John",
@@ -51,6 +52,7 @@ curl -d '{
 ```
 
 #### 2. Update booking
+
 ```bash
 curl -d '{
   "guestFirstName": "Denis_updated",
@@ -61,13 +63,15 @@ curl -d '{
 ```
 
 #### 3. Delete booking
+
 ```bash
-curl -X DELETE http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/bookings/5299e50c-4de4-4d76-95df-412552a9fe30
+curl -X DELETE http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/bookings/5299e50c-4de4-4d76-95df-412552a9fe38
 ```
 
 ### Property blocks
 
 #### 1. Create property block
+
 ```bash
 curl -d '{
   "startDate": "2023-12-12T00:00:00Z",
@@ -76,6 +80,7 @@ curl -d '{
 ```
 
 #### 2. Update property block
+
 ```bash
 curl -d '{
   "guestFirstName": "Denis_updated",
@@ -86,6 +91,7 @@ curl -d '{
 ```
 
 #### 3. Delete property block
+
 ```bash
 curl -X DELETE http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocking/49122e5e-7983-447d-a340-03c4a774bae3
 ```

@@ -63,7 +63,11 @@ public class PropertyBookingsService {
 
     @Transactional
     public void cancelBooking(UUID propertyId, UUID bookingId) {
-        propertyBookingsRepository.cancelBooking(propertyId, bookingId);
+        boolean bookingCanceled = propertyBookingsRepository.cancelBooking(propertyId, bookingId);
+
+        if (!bookingCanceled) {
+            throw new NotFoundException("Property booking not found");
+        }
     }
 
 }

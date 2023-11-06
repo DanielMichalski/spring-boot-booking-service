@@ -59,7 +59,11 @@ public class PropertyBlocksService {
 
     @Transactional
     public void cancelBlock(UUID propertyId, UUID blockId) {
-        propertyBlocksRepository.cancelBlock(propertyId, blockId);
+        boolean blockCanceled = propertyBlocksRepository.cancelBlock(propertyId, blockId);
+
+        if (!blockCanceled) {
+            throw new NotFoundException("Property block not found");
+        }
     }
 
 }

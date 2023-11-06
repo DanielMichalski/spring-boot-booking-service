@@ -63,5 +63,5 @@ public interface PropertyBlocksRepository {
                     AND property_id = #{propertyId}
                     AND date_deleted IS NULL
             """)
-    void cancelBlock(@Param("propertyId") UUID propertyId, @Param("blockId") UUID blockId);
+    boolean cancelBlock(@Param("propertyId") UUID propertyId, @Param("blockId") UUID blockId);
 }
