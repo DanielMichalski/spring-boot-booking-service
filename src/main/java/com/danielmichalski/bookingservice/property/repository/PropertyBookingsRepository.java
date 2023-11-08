@@ -41,8 +41,11 @@ public interface PropertyBookingsRepository {
                                      @Param("endDate") OffsetDateTime endDate);
 
     @Insert("""
-                INSERT INTO property_bookings (id, guest_first_name, guest_last_name, date_created, start_date, end_date, property_id)
-                VALUES (#{id}, #{guestFirstName}, #{guestLastName}, #{dateCreated}, #{startDate}, #{endDate}, #{propertyId})
+                INSERT INTO property_bookings
+                    (id, guest_first_name, guest_last_name, date_created, start_date, end_date, property_id)
+                VALUES
+                    (#{id}, #{guestFirstName}, #{guestLastName}, #{dateCreated}, #{startDate}, #{endDate},
+                     #{propertyId})
             """)
     void bookProperty(PropertyBookingEntity propertyBookingEntity);
 
