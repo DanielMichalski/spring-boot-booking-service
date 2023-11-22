@@ -8,4 +8,5 @@ public record PropertyBlockDto(UUID id,
                                OffsetDateTime startDate,
                                OffsetDateTime endDate,
                                UUID propertyId) {
+
 }

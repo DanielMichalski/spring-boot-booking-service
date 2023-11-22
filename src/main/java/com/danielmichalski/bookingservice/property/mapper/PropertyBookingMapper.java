@@ -8,16 +8,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class PropertyBookingMapper {
 
-    public static PropertyBookingDto mapTaskDto(PropertyBookingEntity entity) {
-        return new PropertyBookingDto(
-                entity.id(),
-                entity.guestFirstName(),
-                entity.guestLastName(),
-                entity.dateCreated(),
-                entity.startDate(),
-                entity.endDate(),
-                entity.propertyId()
-        );
-    }
+  public static PropertyBookingDto mapTaskDto(PropertyBookingEntity entity) {
+    return new PropertyBookingDto(
+        entity.id(),
+        entity.guestFirstName(),
+        entity.guestLastName(),
+        entity.dateCreated(),
+        entity.startDate(),
+        entity.endDate(),
+        entity.propertyId()
+    );
+  }
 
 }

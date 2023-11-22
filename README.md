@@ -45,7 +45,7 @@ mvnw.cmd spring-boot:run
 ```bash
 curl -d '{
   "guestFirstName": "John",
-  "questLastName": "Travolta",
+  "guestLastName": "Travolta",
   "startDate": "2027-12-03T00:00:00Z",
   "endDate": "2027-12-06T00:00:00Z"
 }' -H "Content-Type: application/json" -X POST http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/bookings
@@ -56,7 +56,7 @@ curl -d '{
 ```bash
 curl -d '{
   "guestFirstName": "Denis_updated",
-  "questLastName": "Carey_updated",
+  "guestLastName": "Carey_updated",
   "startDate": "2025-12-07T00:00:00Z",
   "endDate": "2025-12-08T00:00:00Z"
 }' -H "Content-Type: application/json" -X PUT http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/bookings/cdd88bcb-8fc7-4a39-822c-e514150d769e
@@ -84,7 +84,7 @@ curl -d '{
 ```bash
 curl -d '{
   "guestFirstName": "Denis_updated",
-  "questLastName": "Carey_updated",
+  "guestLastName": "Carey_updated",
   "startDate": "2025-12-07T00:00:00Z",
   "endDate": "2025-12-08T00:00:00Z"
 }' -H "Content-Type: application/json" -X PUT http://localhost:8080/api/properties/6c5d63b4-d776-4a9a-a5ac-06244ebfbcdf/blocks/2e8d11c2-3c7e-4dd8-9714-dd2e5968b4ed

@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-	<changeSet id="properties-test-data" author="michalskidaniel2@gmail.com" runOnChange="true" context="test-data">
-		<comment>Fill properties table with test data</comment>
-		<loadUpdateData file="csv/properties.csv"
-						primaryKey="id"
-						tableName="properties"
-						relativeToChangelogFile="true"
-						separator=";">
-		</loadUpdateData>
-	</changeSet>
+  <changeSet id="properties-test-data" author="michalskidaniel2@gmail.com" runOnChange="true"
+             context="test-data">
+    <comment>Fill properties table with test data</comment>
+    <loadUpdateData file="csv/properties.csv"
+                    primaryKey="id"
+                    tableName="properties"
+                    relativeToChangelogFile="true"
+                    separator=";">
+    </loadUpdateData>
+  </changeSet>
 
-    <changeSet id="property-bookings-test-data" author="michalskidaniel2@gmail.com" runOnChange="true" context="test-data">
-        <comment>Fill property_bookings table with test data</comment>
-        <loadUpdateData file="csv/property_bookings.csv"
-                        primaryKey="id"
-                        tableName="property_bookings"
-                        relativeToChangelogFile="true"
-                        separator=";">
-        </loadUpdateData>
-    </changeSet>
+  <changeSet id="property-bookings-test-data" author="michalskidaniel2@gmail.com" runOnChange="true"
+             context="test-data">
+    <comment>Fill property_bookings table with test data</comment>
+    <loadUpdateData file="csv/property_bookings.csv"
+                    primaryKey="id"
+                    tableName="property_bookings"
+                    relativeToChangelogFile="true"
+                    separator=";">
+    </loadUpdateData>
+  </changeSet>
 
-    <changeSet id="property-blocks-test-data" author="michalskidaniel2@gmail.com" runOnChange="true" context="test-data">
-        <comment>Fill property_blocks table with test data</comment>
-        <loadUpdateData file="csv/property_blocks.csv"
-                        primaryKey="id"
-                        tableName="property_blocks"
-                        relativeToChangelogFile="true"
-                        separator=";">
-        </loadUpdateData>
-    </changeSet>
+  <changeSet id="property-blocks-test-data" author="michalskidaniel2@gmail.com" runOnChange="true"
+             context="test-data">
+    <comment>Fill property_blocks table with test data</comment>
+    <loadUpdateData file="csv/property_blocks.csv"
+                    primaryKey="id"
+                    tableName="property_blocks"
+                    relativeToChangelogFile="true"
+                    separator=";">
+    </loadUpdateData>
+  </changeSet>
 
 </databaseChangeLog>

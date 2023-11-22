@@ -8,14 +8,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class PropertyBlockMapper {
 
-    public static PropertyBlockDto mapTaskDto(PropertyBlockEntity entity) {
-        return new PropertyBlockDto(
-                entity.id(),
-                entity.dateCreated(),
-                entity.startDate(),
-                entity.endDate(),
-                entity.propertyId()
-        );
-    }
+  public static PropertyBlockDto mapTaskDto(PropertyBlockEntity entity) {
+    return new PropertyBlockDto(
+        entity.id(),
+        entity.dateCreated(),
+        entity.startDate(),
+        entity.endDate(),
+        entity.propertyId()
+    );
+  }
 
 }
